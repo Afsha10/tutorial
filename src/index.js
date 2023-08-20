@@ -23,12 +23,7 @@ const Book = () => {
   );
 };
 
-const Image = () => (
-  <img
-    src="https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL600_SR600,400_.jpg"
-    alt="Iron Flame"
-  />
-);
+const Image = () => <img src="./images/book-1.jpg" alt="Iron Flame" />;
 const Title = () => <h2>Iron Flame</h2>;
 const Author = () => {
   return <h4>Rebecca Yarros</h4>;
