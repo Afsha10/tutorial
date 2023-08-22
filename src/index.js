@@ -26,12 +26,12 @@ const Book = () => {
 const Image = () => <img src="./images/book-1.jpg" alt="Iron Flame" />;
 const Title = () => <h2>Iron Flame</h2>;
 const Author = () => {
-  return <h4 style={{color: "#617d98", fontSize: "0.75", marginTop: "0.5rem"}}>Rebecca Yarros</h4>;
-};
-
-const Person = () => <h2>Madam Marie Curie</h2>;
-const Message = () => {
-  return <p>This is my message</p>;
+  const inlineHeadingStyles = {
+    color: "#617d98", 
+    fontSize: "0.75", 
+    marginTop: "0.5rem"
+  }
+  return <h4 style={inlineHeadingStyles}>Rebecca Yarros</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
