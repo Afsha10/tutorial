@@ -5,8 +5,8 @@ import "./index.css";
 const firstBook = {
   author: "Rebecca Yarros",
   title: "Iron Flame",
-  img: "./images/book-1.jpg"
-}
+  img: "./images/book-1.jpg",
+};
 
 const secondBook = {
   author: "James Clear",
@@ -17,18 +17,35 @@ const secondBook = {
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book title={firstBook.title} author={firstBook.author} img={firstBook.img} />
-      <Book title={secondBook.title} author={secondBook.author} img={secondBook.img} />
+      <Book
+        title={firstBook.title}
+        author={firstBook.author}
+        img={firstBook.img}
+      >
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+          sit at modi asperiores tenetur, ut porro? Laboriosam natus eveniet
+          illum quisquam iure, dignissimos repellat a quidem aliquam commodi.
+          Doloribus, maiores?
+        </p>
+        <button>click me</button>
+      </Book>
+      <Book
+        title={secondBook.title}
+        author={secondBook.author}
+        img={secondBook.img}
+      />
     </section>
   );
 };
 
-const Book = ({ img, title, author }) => {
+const Book = ({ img, title, author, children }) => {
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{author}</h4>
+      {children}
     </article>
   );
 };
