@@ -14,24 +14,15 @@ const BookList = () => {
 };
 
 const Book = () => {
+  const title = "Iron Flame";
+  const author = "Rebecca Yarros";
   return (
     <article className="book">
-      <Image />
-      <Title />
-      <Author />
+      <img src="./images/book-1.jpg" alt="Iron Flame" />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
   );
-};
-
-const Image = () => <img src="./images/book-1.jpg" alt="Iron Flame" />;
-const Title = () => <h2>Iron Flame</h2>;
-const Author = () => {
-  const inlineHeadingStyles = {
-    color: "#617d98", 
-    fontSize: "0.75", 
-    marginTop: "0.5rem"
-  }
-  return <h4 style={inlineHeadingStyles}>Rebecca Yarros</h4>;
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
