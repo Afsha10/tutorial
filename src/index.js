@@ -7,11 +7,13 @@ const books = [
     author: "Rebecca Yarros",
     title: "Iron Flame",
     img: "./images/book-1.jpg",
+    id: 1,
   },
   {
     author: "James Clear",
     title: "Atomic Habits",
     img: "https://m.media-amazon.com/images/I/51B7kuFwQFL._SX329_BO1,204,203,200_.jpg",
+    id: 2,
   },
 ];
 
@@ -19,10 +21,10 @@ const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        const {img, title, author} = book;
+        const {img, title, author, id} = book;
         return (
           <div>
-            <Book title= {title} img={img} author={author} />
+            <Book title= {title} img={img} author={author} key={id}/>
           </div>
         );
       })}
