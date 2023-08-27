@@ -40,21 +40,26 @@ const EventExamples = () => {
   };
   const handleFormSubmission = (event) => {
     event.preventDefault();
-    console.log('form submitted');
+    console.log("form submitted");
   };
-  
+
   return (
     <section>
       <form onSubmit={handleFormSubmission}>
         <h2>Typical Form</h2>
         <input
           type="text"
-          name="example"
+          name="product"
           onChange={handleFormInput}
           style={{ margin: "1rem 0" }}
         />
+        <button type="submit">submit</button>
+        <div>
+          <button onClick={handleButtonClick} type="button">
+            click me
+          </button>
+        </div>
       </form>
-      <button onClick={handleButtonClick}>click me</button>
     </section>
   );
 };
