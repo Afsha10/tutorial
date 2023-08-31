@@ -24,7 +24,8 @@ const BookList = () => {
   }
 
   function getBook(id) {
-      books.find((book) => book.id === id)
+      const matchingBook = books.find((book) => book.id === id)
+      console.log(matchingBook);
   }
 
   return (
@@ -44,7 +45,7 @@ const Book = (props) => {
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
-      <button onClick={getBook(id)}>Click me</button>
+      <button onClick={() => getBook(id)}>Click me</button>
       <h4>{author}</h4>
     </article>
   );
