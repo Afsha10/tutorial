@@ -18,11 +18,6 @@ const books = [
 ];
 
 const BookList = () => {
-  const someValue = "shakeAndBake"
-  const displayValue = () => {
-    console.log(someValue);
-  }
-
   function getBook(id) {
       const matchingBook = books.find((book) => book.id === id)
       console.log(matchingBook);
@@ -31,13 +26,11 @@ const BookList = () => {
   return (
     <section className="booklist">
       {books.map((book) => {
-        return <Book {...book} key={book.id} displayValue={displayValue} getBook={getBook} />;
+        return <Book {...book} key={book.id} getBook={getBook} />;
       })}
     </section>
   );
 };
-
-
 
 const Book = (props) => {
   const { img, title, author, id, getBook } = props;
