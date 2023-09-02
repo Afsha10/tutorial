@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 import {books} from './books'
-import Book from './Book';
+import {Book} from './Book';
 
 const BookList = () => {
 
