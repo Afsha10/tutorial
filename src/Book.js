@@ -1,4 +1,4 @@
-export const Book = (props) => {
+const Book = (props) => {
   const { img, title, author } = props;
 
   return (
@@ -9,3 +9,5 @@ export const Book = (props) => {
     </article>
   );
 };
+
+export default Book;
